@@ -120,6 +120,27 @@
         .dropdown-trigger.active .down-arrow {
             transform: rotate(180deg);
         }
+
+        /* first amendment */
+         .highlight {
+            background-color: white;
+            color: #4a6f8a; /* Dark grey-blue */
+            transition: all 0.5s ease;
+            display: inline-block;
+            padding: 0 2px; /* Add some padding for better visibility */
+        }
+
+        .highlight:hover {
+            font-size: 1.2em; /* Increase font size on hover */
+        }
+
+        .highlight-text:hover .highlight ~ * {
+            opacity: 0.5; /* Reduce opacity of text after the highlight */
+        }
+
+        .highlight-text:hover *:not(.highlight) {
+            opacity: 0.5; /* Reduce opacity of text before the highlight */
+        }
     </style>
 </head>
 <body>
