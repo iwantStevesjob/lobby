@@ -26,7 +26,7 @@
         }
 
         .container {
-            width: 600px;
+            width: 800px;
             margin: 0 auto;
         }
 
@@ -123,27 +123,29 @@
 
         /* first amendment */
         #first-amendment {
-             font-size:20px;
+             font-size:25px;
              line-height:30px;
+            font-family: 'Roboto', sans-serif;
         }
-         .highlight {
+
+        
+
+        .highlight-text span {
+            transition: all 1.5s ease-in-out;
+        }
+
+        .highlight {
             background-color: white;
             color: #4a6f8a; /* Dark grey-blue */
-            transition: all 0.5s ease;
-            display: inline-block;
-            padding: 0 2px; /* Add some padding for better visibility */
+            padding: 0 2px;
         }
 
-        .highlight:hover {
-            font-size: 1.2em; /* Increase font size on hover */
+        .highlight-text:hover .highlight {
+            font-size: 1.3em; /* Increase font size on hover */
         }
 
-        .highlight-text:hover .highlight ~ * {
-            opacity: 0.5; /* Reduce opacity of text after the highlight */
-        }
-
-        .highlight-text:hover *:not(.highlight) {
-            opacity: 0.5; /* Reduce opacity of text before the highlight */
+        .highlight-text:hover span:not(.highlight) {
+            opacity: 0.3; /* Reduce opacity of text before and after the highlight */
         }
     </style>
 </head>
